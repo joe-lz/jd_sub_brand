@@ -1,0 +1,96 @@
+.com {
+  &-brandItem {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    width: 100%;
+    flex: 1;
+    text-align: center;
+    background-color: white;
+    color: white;
+    background-color: #333;
+    border-radius: 16px;
+    border: 1px solid #E9ECF0;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+    &-top {
+      width: 100%;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &-bottom {
+      display: flex;
+      width: 100%;
+      height: 130px;
+      &-item {
+        padding-bottom: 30px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        &-icon {
+          overflow: hidden;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 60px;
+        }
+        Text {
+          color: white;
+          line-height: 40px;
+        }
+      }
+    }
+    &-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 120px;
+      background-color: white;
+      &-left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 120px;
+        height: 100%;
+        &-avatar {
+          overflow: hidden;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 70px;
+          height: 70px;
+          background-color: #E9ECF0;
+          border-radius: 50%;
+          background-position: center;
+          background-size: cover;
+          border: 1px solid rgba(0,0,0,0.1);
+        }
+      }
+      &-middle {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        &-desc {
+          color: #6C7D95;
+        }
+      }
+      &-right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 100%;
+        Text {
+          color: #F05858;
+        }
+      }
+    }
+  }
+}

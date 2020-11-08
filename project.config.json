@@ -1,0 +1,68 @@
+{
+  "miniprogramRoot": "dist/",
+  "projectname": "public",
+  "description": "鲸典taro",
+  "appid": "wx3db60cced1eeb85a",
+  "setting": {
+    "urlCheck": false,
+    "es6": false,
+    "enhance": false,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": false,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": false,
+    "useApiHook": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": []
+  },
+  "compileType": "miniprogram",
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "miniprogram": {
+      "current": -1,
+      "list": [
+        {
+          "id": 0,
+          "name": "登陆",
+          "pathName": "pages/auth/index",
+          "query": "",
+          "scene": "1011"
+        },
+        {
+          "id": 1,
+          "name": "webview",
+          "pathName": "pages/webview/index",
+          "query": "url=https://www.baidu.com",
+          "scene": "1011"
+        },
+        {
+          "id": 1,
+          "name": "webviewShare",
+          "pathName": "pages/webviewShare/index",
+          "query": "url=https://www.baidu.com",
+          "scene": "1011"
+        }
+      ]
+    }
+  }
+}
