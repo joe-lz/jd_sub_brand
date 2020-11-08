@@ -4,7 +4,12 @@ import { View, Button, Text, Navigator, Swiper, SwiperItem } from "@tarojs/compo
 
 import "./index.scss";
 import Tabbar from "@_gen/components/Tabbar";
-
+require("../../images/tabbar/icon1_light.png");
+require("../../images/tabbar/icon1_light_active.png");
+require("../../images/tabbar/icon2_light.png");
+require("../../images/tabbar/icon2_light_active.png");
+require("../../images/tabbar/icon3_light.png");
+require("../../images/tabbar/icon3_light_active.png");
 class Index extends Component {
   constructor(props) {
     super(props);
