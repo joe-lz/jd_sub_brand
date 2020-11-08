@@ -9,8 +9,6 @@ import getPath from "@_gen/utils/getPath";
 
 function Index(props) {
   const { brandItem = {} } = props;
-  console.log(brandItem);
-
   return (
     <View
       className="com-brandItemNotMine"

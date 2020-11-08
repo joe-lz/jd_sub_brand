@@ -39,7 +39,7 @@ class Index extends Component {
           activeColor="#F05858"
           list={[
             {
-              pagePath: "pages/home/index",
+              pagePath: "pages/index/index",
               text: "品牌商城",
               iconPath: "../../images/tabbar/icon1_light.png",
               selectedIconPath: "../../images/tabbar/icon1_light_active.png",
