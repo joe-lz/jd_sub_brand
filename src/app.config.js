@@ -32,14 +32,13 @@ export default {
   //     }
   //   ]
   // }
-  pages: ["pages/index/index"],
+  pages: ["pages/index/index", "pages/me/index"],
   subpackages: [],
   window: {
     backgroundTextStyle: "light",
     navigationBarBackgroundColor: "#fff",
     navigationBarTitleText: "WeChat",
-    navigationBarTextStyle: "black",
-    navigationStyle: "custom"
+    navigationBarTextStyle: "black"
   },
   navigateToMiniProgramAppIdList: ["wx8abaf00ee8c3202e", "wx6885acbedba59c14"]
 };

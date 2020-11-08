@@ -1,63 +1,66 @@
-import React, { Component } from 'react'
-import { View, Button, Text } from '@tarojs/components'
-import { observer, inject } from 'mobx-react'
+import React, { Component } from "react";
+import { View, Button, Text, Navigator, Swiper, SwiperItem } from "@tarojs/components";
 
-import './index.scss'
+import "./index.scss";
+import Tabbar from "@_gen/components/Tabbar";
 
-type PageStateProps = {
-  store: {
-    counterStore: {
-      counter: number,
-      increment: Function,
-      decrement: Function,
-      incrementAsync: Function
-    }
-  }
-}
-
-interface Index {
-  props: PageStateProps;
-}
-
-@inject('store')
-@observer
 class Index extends Component {
-  componentWillMount () { }
-
-  componentDidMount () { }
-
-  componentWillUnmount () { }
-
-  componentDidShow () { }
-
-  componentDidHide () { }
-
-  increment = () => {
-    const { counterStore } = this.props.store
-    counterStore.increment()
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentIndex: 2,
+    };
   }
 
-  decrement = () => {
-    const { counterStore } = this.props.store
-    counterStore.decrement()
+  componentDidMount() {}
+
+  onShareAppMessage(res) {
+    return {
+      title: "鲸典设计",
+      path: "/pages/index/index",
+    };
   }
 
-  incrementAsync = () => {
-    const { counterStore } = this.props.store
-    counterStore.incrementAsync()
-  }
-
-  render () {
-    const { counterStore: { counter } } = this.props.store
+  render() {
     return (
-      <View className='index'>
-        <Button onClick={this.increment}>+</Button>
-        <Button onClick={this.decrement}>-</Button>
-        <Button onClick={this.incrementAsync}>Add Async</Button>
-        <Text>{counter}</Text>
+      <View className="index">
+        <Swiper>
+          <SwiperItem>123</SwiperItem>
+          <SwiperItem>456</SwiperItem>
+        </Swiper>
+        <Tabbar
+          onChange={index => {
+            this.setState({
+              currentIndex: index,
+            });
+          }}
+          current={this.state.currentIndex}
+          color="#000"
+          activeColor="#F05858"
+          list={[
+            {
+              pagePath: "pages/home/index",
+              text: "品牌商城",
+              iconPath: "/images/tabbar/icon1_light.png",
+              selectedIconPath: "/images/tabbar/icon1_light_active.png",
+            },
+            {
+              pagePath: "pages/me/index",
+              text: "购物车",
+              iconPath: "/images/tabbar/icon2_light.png",
+              selectedIconPath: "/images/tabbar/icon2_light_active.png",
+            },
+            {
+              pagePath: "pages/me/index",
+              text: "我的",
+              iconPath: "/images/tabbar/icon3_light.png",
+              selectedIconPath: "/images/tabbar/icon3_light_active.png",
+            },
+          ]}
+        />
       </View>
-    )
+    );
   }
 }
 
-export default Index
+export default Index;
