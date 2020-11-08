@@ -41,20 +41,20 @@ class Index extends Component {
             {
               pagePath: "pages/home/index",
               text: "品牌商城",
-              iconPath: "/images/tabbar/icon1_light.png",
-              selectedIconPath: "/images/tabbar/icon1_light_active.png",
+              iconPath: "../../images/tabbar/icon1_light.png",
+              selectedIconPath: "../../images/tabbar/icon1_light_active.png",
             },
             {
               pagePath: "pages/me/index",
               text: "购物车",
-              iconPath: "/images/tabbar/icon2_light.png",
-              selectedIconPath: "/images/tabbar/icon2_light_active.png",
+              iconPath: "../../images/tabbar/icon2_light.png",
+              selectedIconPath: "../../images/tabbar/icon2_light_active.png",
             },
             {
               pagePath: "pages/me/index",
               text: "我的",
-              iconPath: "/images/tabbar/icon3_light.png",
-              selectedIconPath: "/images/tabbar/icon3_light_active.png",
+              iconPath: "../../images/tabbar/icon3_light.png",
+              selectedIconPath: "../../images/tabbar/icon3_light_active.png",
             },
           ]}
         />
