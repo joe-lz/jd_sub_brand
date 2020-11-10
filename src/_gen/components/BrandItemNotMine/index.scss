@@ -5,6 +5,8 @@
     flex-direction: column;
     margin-bottom: 30px;
     width: 100%;
+    max-width: 900px;
+    min-width: 580px;
     flex: 1;
     line-height: 200px;
     text-align: center;
@@ -12,6 +14,12 @@
     border-radius: 16px;
     color: white;
     background-color: #333;
+    &-windows,
+    &-mac {
+      max-width: 580px;
+    }
+    &:nth-child(2n) {
+    }
     &-top {
       width: 100%;
       height: 230px;

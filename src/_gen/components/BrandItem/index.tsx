@@ -14,7 +14,7 @@ function Index(props) {
   const { hideCard = false, brandItem = {}, mybrand = {} } = props;
   return (
     <View
-      className="com-brandItem"
+      className={`com-brandItem com-brandItem-${props.platform}`}
       style={{
         background: `linear-gradient(315deg, ${brandItem.color_brand_light} 0%,${brandItem.color_brand_dark} 100%)`,
       }}

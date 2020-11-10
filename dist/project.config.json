@@ -1,5 +1,4 @@
 {
-  "miniprogramRoot": "./",
   "projectname": "brand",
   "description": "鲸典taro",
   "appid": "wx3db60cced1eeb85a",
@@ -39,7 +38,6 @@
   "simulatorPluginLibVersion": {},
   "condition": {
     "miniprogram": {
-      "current": -1,
       "list": [
         {
           "id": 0,
