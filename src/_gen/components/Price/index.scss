@@ -1,0 +1,22 @@
+.com {
+  &-price {
+    &-icon {
+      margin-right: 6px;
+      font-weight: 28px;
+      color: #f05858;
+    }
+    &-value {
+      font-weight: 500;
+      font-size: 40px;
+      color: #f05858;
+    }
+    &-large {
+      .com-price-icon {
+        font-weight: 32px;
+      }
+      .com-price-value {
+        font-size: 80px;
+      }
+    }
+  }
+}

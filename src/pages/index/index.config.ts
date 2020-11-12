@@ -1,3 +1,3 @@
 export default {
-  navigationBarTitleText: '鲸典设计'
+  navigationBarTitleText: '品牌页面'
 }

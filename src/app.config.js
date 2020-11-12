@@ -32,7 +32,7 @@ export default {
   //     }
   //   ]
   // }
-  pages: ["pages/index/index", "pages/me/index"],
+  pages: ["pages/index/index", "pages/product-detail/index", "pages/me/index"],
   subpackages: [],
   window: {
     backgroundTextStyle: "light",

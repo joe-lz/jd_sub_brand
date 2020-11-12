@@ -1,3 +1,30 @@
-.index {
-  min-height: 100vh;
+.brandshop {
+  padding-bottom: 100px;
+  margin-bottom: constant(safe-area-inset-bottom); /* 兼容 iOS < 11.2 */
+  margin-bottom: env(safe-area-inset-bottom); /* 兼容 iOS >= 11.2 */
+  background-color: white;
+  &-section {
+    &-title {
+      text-align: center;
+      padding-bottom: 30px;
+      padding-top: 60px;
+      &-icon {
+        vertical-align: middle;
+        width: 40px;
+        height: 40px;
+      }
+      Text {
+        vertical-align: middle;
+        margin: 0 20px;
+        height: 40px;
+        line-height: 40px;
+      }
+    }
+    &-lists {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 0 30px;
+    }
+  }
 }

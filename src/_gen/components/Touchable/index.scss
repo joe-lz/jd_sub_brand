@@ -1,0 +1,21 @@
+.com {
+  &-touchable {
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+    transition: 0.3s;
+    border-radius: 0;
+    text-align: left;
+    line-height: initial;
+    &-borderbottom {
+      border-bottom: 1px solid #e9ecf0;
+    }
+    &-hover {
+      background-color: darken(white, 10%);
+    }
+    &:after {
+      border: none;
+      outline: none;
+    }
+  }
+}

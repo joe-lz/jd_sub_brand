@@ -43,9 +43,9 @@
       "list": [
         {
           "id": 0,
-          "name": "登陆",
-          "pathName": "pages/auth/index",
-          "query": "",
+          "name": "首页",
+          "pathName": "pages/index/index",
+          "query": "bId=16",
           "scene": "1011"
         },
         {
