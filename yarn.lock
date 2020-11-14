@@ -4901,6 +4901,11 @@ dayjs@^1.7.7:
   resolved "http://npm.crgt.xyz/dayjs/-/dayjs-1.9.5.tgz#fd49994ebe71639d2ce9575e97186642dfce9808"
   integrity sha1-/UmZTr5xY50s6VdelxhmQt/OmAg=
 
+dayjs@^1.9.6:
+  version "1.9.6"
+  resolved "http://npm.crgt.xyz/dayjs/-/dayjs-1.9.6.tgz#6f0c77d76ac1ff63720dd1197e5cb87b67943d70"
+  integrity sha1-bwx312rB/2NyDdEZfly4e2eUPXA=
+
 de-indent@^1.0.2:
   version "1.0.2"
   resolved "http://npm.crgt.xyz/de-indent/-/de-indent-1.0.2.tgz#b2038e846dc33baa5796128d0804b455b8c1e21d"
@@ -9893,11 +9898,6 @@ mobx@^4.8.0:
   version "4.15.7"
   resolved "http://npm.crgt.xyz/mobx/-/mobx-4.15.7.tgz#933281268c3b4658b6cf2526e872cf78ea48ab95"
   integrity sha1-kzKBJow7Rli2zyUm6HLPeOpIq5U=
-
-moment@^2.29.1:
-  version "2.29.1"
-  resolved "http://npm.crgt.xyz/moment/-/moment-2.29.1.tgz#b2be769fa31940be9eeea6469c075e35006fa3d3"
-  integrity sha1-sr52n6MZQL6e7qZGnAdeNQBvo9M=
 
 move-concurrently@^1.0.1:
   version "1.0.1"

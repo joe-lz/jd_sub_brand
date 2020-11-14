@@ -42,7 +42,7 @@ class Index extends Component {
   _goDetail({ status }) {
     Taro.navigateTo({
       url: getPath({
-        moduleName: "public",
+        moduleName: "brand",
         url: `/pages/order-lists/index`,
         params: {
           status,

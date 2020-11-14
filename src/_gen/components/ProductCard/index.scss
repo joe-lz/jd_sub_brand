@@ -1,0 +1,41 @@
+.com {
+  &-productcard {
+    &-logo {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      border: 1px solid #e9ecf0;
+      background-color: white;
+    }
+
+    &-middle {
+      display: flex;
+      justify-content: space-between;
+      flex: 1;
+      padding: 0px 20px;
+      padding-right: 0;
+      padding-bottom: 10px;
+
+      Text {
+        display: block;
+        line-height: 1.4;
+      }
+      &-content {
+        &-price {
+          color: #f05858;
+        }
+      }
+      &-right {
+      }
+      &-title {
+        overflow: hidden;
+        box-sizing: border-box;
+        display: -webkit-box !important;
+        word-break: break-all;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+      }
+    }
+  }
+}

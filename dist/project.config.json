@@ -73,7 +73,7 @@
           "id": 4,
           "name": "订单列表",
           "pathName": "pages/order-lists/index",
-          "query": "",
+          "query": "status=0",
           "scene": "1011"
         },
         {
