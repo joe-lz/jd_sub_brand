@@ -1,0 +1,138 @@
+.orderdetail {
+  padding-bottom: 100px;
+  min-height: 100vh;
+  background-color: #f2f2f2;
+  &-block {
+    margin-bottom: 20px;
+    padding: 40px 30px;
+    background-color: white;
+  }
+  &-operations {
+    padding-bottom: calc(constant(safe-area-inset-bottom));
+    padding-bottom: calc(env(safe-area-inset-bottom));
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    border-top: 1px solid #e9ecf0;
+    background-color: white;
+    &-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100px;
+    }
+    &-btn {
+      margin-left: 20px;
+    }
+    &-left {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      width: 100px;
+      height: 100px;
+    }
+    &-right {
+      padding-right: 30px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  }
+  &-status {
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #f05858;
+    height: 200px;
+    Text {
+      color: white;
+    }
+    &-title {
+      margin-bottom: 10px;
+    }
+  }
+  &-address {
+    display: flex;
+    &-content {
+      padding-left: 10px;
+    }
+    &-userinfo {
+      margin-bottom: 10px;
+    }
+    &-username {
+      margin-right: 15px;
+    }
+    &-location {
+      overflow: hidden;
+      box-sizing: border-box;
+      display: -webkit-box;
+      word-break: break-all;
+      text-overflow: ellipsis;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      color: #6c7d95;
+    }
+  }
+  &-productInfo {
+    padding: 0;
+    &-bottom {
+      padding: 20px 30px;
+      border-top: 1px solid #e9ecf0;
+    }
+    &-menu {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      &-desc {
+        color: #6c7d95;
+      }
+    }
+    &-price {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding-right: 30px;
+      height: 88px;
+      font-weight: 500;
+      border-top: 1px solid #e9ecf0;
+      &-value {
+        color: #f05858;
+      }
+    }
+  }
+  &-orderInfo {
+    padding: 0;
+    &-lists {
+      padding: 20px 30px;
+    }
+    &-border {
+      border-bottom: 1px solid #e9ecf0;
+    }
+    &-item {
+      display: flex;
+      height: 50px;
+      line-height: 50px;
+      overflow: hidden;
+    }
+    &-label {
+      width: 100px;
+      text-align: justify;
+      color: #6c7d95;
+      font-size: 24px;
+      &:after {
+        content: "";
+        display: inline-block;
+        width: 100%;
+      }
+      &-desc {
+        color: #6c7d95;
+        font-size: 24px;
+      }
+    }
+  }
+}

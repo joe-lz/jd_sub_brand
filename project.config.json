@@ -82,6 +82,13 @@
           "pathName": "pages/order-create/index",
           "query": "",
           "scene": "1011"
+        },
+        {
+          "id": 6,
+          "name": "订单详情",
+          "pathName": "pages/order-detail/index",
+          "query": "orderId=5fafbbca227a5a0822047dfa",
+          "scene": "1011"
         }
       ]
     }

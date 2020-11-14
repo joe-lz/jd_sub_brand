@@ -40,7 +40,7 @@ export async function getOrderListByUserId(status) {
   if (status) {
     queryOrder.equalTo("status", status);
   }
-  queryOrder.limit(20);
+  queryOrder.limit(50);
   queryOrder.descending("createdAt");
   return new Promise(resolve => {
     queryOrder.find().then(res => {

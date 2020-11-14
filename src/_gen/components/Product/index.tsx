@@ -72,14 +72,14 @@ function Index(props) {
             </View>
           </View>
           <View className="com-productinfo-middle">
-            <Text className="">{Object.values(productData.skuinfo).join("、")}</Text>
+            <Text className="com-productinfo-middle-desc">{Object.values(productData.skuinfo).join("、")}</Text>
           </View>
           <View className="com-productinfo-middle">
             <View className="com-productinfo-middle-content">
               <Text className="com-productinfo-middle-content-price">￥{product_id.price_sale / 100}</Text>
             </View>
             <View className="com-productinfo-middle-right">
-              <Text className="">x{productData.number}</Text>
+              <Text className="com-productinfo-middle-desc">x{productData.number}</Text>
             </View>
           </View>
         </View>

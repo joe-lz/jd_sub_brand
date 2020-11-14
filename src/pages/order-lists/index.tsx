@@ -51,26 +51,28 @@ class Index extends Component {
         moduleName: "brand",
         url: `/pages/order-detail/index`,
         params: {
-          orderId: orderId,
+          orderId: objectId,
         },
       }),
     });
   }
 
   async onMenuClcik(menuItem, index) {
-    this.setState({ current: index });
+    this.setState({ current: index, orderLists: [] });
     const orderLists = (await getOrderListByUserId(menuItem.status)).result;
     this.setState({ orderLists });
   }
 
   _renderProduct({ orderItem }) {
-    const { products } = orderItem;
+    const { products = [] } = orderItem;
     return products.map((profuctItem, profuctItemIndex) => {
       return (
         <Product
           key={`${profuctItemIndex + 1}`}
           productData={profuctItem}
-          onClick={this.jump2Detail.bind(this, orderItem.objectId)}
+          onClick={() => {
+            this.jump2Detail(orderItem.objectId);
+          }}
           borderbottom={profuctItemIndex !== products.length - 1}
         />
       );
@@ -84,7 +86,9 @@ class Index extends Component {
         <ProductCard
           key={`${profuctItemIndex + 1}`}
           productData={profuctItem}
-          onClick={this.jump2Detail.bind(this, orderItem.objectId)}
+          onClick={() => {
+            this.jump2Detail(orderItem.objectId);
+          }}
           borderbottom={profuctItemIndex !== products.length - 1}
         />
       );
