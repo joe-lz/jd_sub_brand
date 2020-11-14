@@ -19,7 +19,10 @@ const config = {
   sourceRoot: "src",
   outputRoot: "dist",
   plugins: [],
-  defineConstants: {},
+  defineConstants: {
+    WEAPP_APPID_TUGECAO: '"wx8abaf00ee8c3202e"', // 吐个槽
+    WEAPP_APPID_KUAIDI100: '"wx6885acbedba59c14"', // 快递100
+  },
   copy: {
     patterns: [
       { from: "src/images/tabbar/", to: "dist/images/tabbar/", ignore: "*.js" }, // 指定需要 copy 的目录

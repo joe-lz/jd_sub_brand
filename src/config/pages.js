@@ -3,7 +3,7 @@
  * @Author: bangdong.chen
  * @Date: 2020-03-07 16:35:31
  * @LastEditors: bangdong.chen
- * @LastEditTime: 2020-11-14 15:03:29
+ * @LastEditTime: 2020-11-14 19:56:03
  * @FilePath: /fe-taro-jinxi/src/config/pages.js
  */
 
@@ -13,4 +13,5 @@ module.exports = [
   "pages/me/index",
   "pages/product-detail/index",
   "pages/order-create/index",
+  "pages/order-list/index",
 ];
