@@ -32,8 +32,20 @@ export default {
   //     }
   //   ]
   // }
-  pages: ["pages/index/index", "pages/product-detail/index", "pages/me/index"],
-  subpackages: [],
+  pages: ["pages/index/index", "pages/cart-list/index", "pages/me/index", "pages/product-detail/index", "pages/order-create/index"],
+  subpackages: [{
+    "root": "packages/brand",
+    "pages": ["pages/index/index", "pages/me/index"]
+  }, {
+    "root": "packages/card",
+    "pages": ["pages/index/index"]
+  }, {
+    "root": "packages/orgs",
+    "pages": ["pages/index/index"]
+  }, {
+    "root": "packages/public",
+    "pages": ["pages/index/index", "pages/webview/index", "pages/webviewShare/index", "pages/auth/index", "pages/intro/index", "pages/redirect/index", "pages/test/index"]
+  }],
   window: {
     backgroundTextStyle: "light",
     navigationBarBackgroundColor: "#fff",

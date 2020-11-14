@@ -17,7 +17,6 @@ function Index(props) {
   const [current, setcurrent] = useState(0);
   const windowWidth = Taro.getSystemInfoSync().windowWidth;
   const { productDetail, imageList, skuList, curBrand, handleCheckSkuSelect } = props;
-  console.log(props);
 
   const imageListArr = [];
   if (imageList) {

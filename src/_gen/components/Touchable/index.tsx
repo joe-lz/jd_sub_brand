@@ -15,7 +15,7 @@ function Index(props) {
 
   return (
     <Button
-      className={`com-touchable ${borderbottom ? "com-touchable-borderbottom" : ""}`}
+      className={`com-touchable ${borderbottom ? "com-touchable-borderbottom" : ""} ${props['my-class']}`}
       style={style}
       hoverClass={onClick ? "com-touchable-hover" : null}
       onClick={() => {

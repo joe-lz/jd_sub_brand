@@ -1,4 +1,8 @@
 .com-ImageSwiper {
+  &-section {
+    margin-bottom: 30px;
+    background-color: white;
+  }
   &-swiperwrapper {
     position: relative;
     background-color: white;
@@ -50,6 +54,7 @@
     &-desc {
       padding-top: 15px;
       padding-bottom: 20px;
+      color: #6C7D95;
     }
   }
   &-choose {

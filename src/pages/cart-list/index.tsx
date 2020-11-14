@@ -8,24 +8,26 @@ import Tabbar from "../index/tabbar";
 class Index extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      currentIndex: 1,
+    };
   }
 
   componentDidMount() {
     let {
-      params: { bId },
+      params: { hidetab, bId },
     } = getCurrentInstance().router;
-    this.setState({ bId: Number(bId) });
+    this.setState({
+      hidetab: Boolean(hidetab),
+      bId,
+    });
   }
 
   render() {
     return (
       <View className="index">
-        <Swiper>
-          <SwiperItem>123</SwiperItem>
-          <SwiperItem>456</SwiperItem>
-        </Swiper>
-        <Tabbar currentIndex={2} bId={this.state.bId} />
+        <View className="index"></View>
+        {this.state.hidetab ? null : <Tabbar currentIndex={1} bId={this.state.bId} />}
       </View>
     );
   }

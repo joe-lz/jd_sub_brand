@@ -7,7 +7,7 @@
  * @LastEditors: bangdong.chen
  * @LastEditTime: 2020-03-04 13:03:09
  */
-const subPackage = [];
+const subPackage = [{"root":"packages/brand","pages":["pages/index/index","pages/me/index"]},{"root":"packages/card","pages":["pages/index/index"]},{"root":"packages/orgs","pages":["pages/index/index"]},{"root":"packages/public","pages":["pages/index/index","pages/webview/index","pages/webviewShare/index","pages/auth/index","pages/intro/index","pages/redirect/index","pages/test/index"]}];
 
 module.exports = subPackage;
   

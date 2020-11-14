@@ -13,19 +13,15 @@ class Index extends Component {
 
   componentDidMount() {
     let {
-      params: { bId },
+      params: { data },
     } = getCurrentInstance().router;
-    this.setState({ bId: Number(bId) });
+    console.log(data);
+    
   }
 
   render() {
     return (
       <View className="index">
-        <Swiper>
-          <SwiperItem>123</SwiperItem>
-          <SwiperItem>456</SwiperItem>
-        </Swiper>
-        <Tabbar currentIndex={2} bId={this.state.bId} />
       </View>
     );
   }

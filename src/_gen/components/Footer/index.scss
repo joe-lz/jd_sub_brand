@@ -1,0 +1,16 @@
+.com {
+  &-tabfooter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #a7b6c9;
+    font-size: 24px;
+    height: 200px;
+    text-align: center;
+    &-title {
+      margin-right: 10px;
+      margin-left: 10px;
+      font-weight: 500;
+    }
+  }
+}

@@ -1,0 +1,59 @@
+.productdetail {
+  padding-bottom: 160px;
+  margin-bottom: constant(safe-area-inset-bottom); /* 兼容 iOS < 11.2 */
+  margin-bottom: env(safe-area-inset-bottom); /* 兼容 iOS >= 11.2 */
+  background-color: #F2F2F2;
+  &-section {
+    overflow: hidden;
+    padding: 0 30px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+    &-title {
+      padding: 40px 30px;
+      padding-left: 0;
+      display: block;
+      font-weight: 500;
+    }
+    &-img {
+      width: 100%;
+    }
+  }
+  &-operations {
+    &-cartnumber {
+      position: absolute;
+      z-index: 10;
+      top: 0px;
+      left: 60px;
+      height: 30px;
+      min-width: 20px;
+      line-height: 30px;
+      padding: 0 10px;
+      border-radius: 15px;
+      background-color: #F05858;
+      color: white !important;
+      text-align: center;
+    }
+    &-btn {
+      overflow: initial;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100px;
+      &-text {
+        font-size: 20px;
+      }
+    }
+    &-btngroup {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      &-item {
+        margin-right: 30px !important;
+      }
+    }
+  }
+}

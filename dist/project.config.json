@@ -50,14 +50,14 @@
         },
         {
           "id": 1,
-          "name": "webview",
-          "pathName": "pages/webview/index",
-          "query": "url=https://www.baidu.com",
+          "name": "商品详情",
+          "pathName": "pages/product-detail/index",
+          "query": "bId=16&pId=8",
           "scene": "1011"
         },
         {
           "id": 1,
-          "name": "webviewShare",
+          "name": "购物车",
           "pathName": "pages/webviewShare/index",
           "query": "url=https://www.baidu.com",
           "scene": "1011"

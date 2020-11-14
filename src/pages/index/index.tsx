@@ -3,7 +3,7 @@ import Taro, { getCurrentInstance } from "@tarojs/taro";
 import { View, Button, Text, Navigator, Swiper, SwiperItem, Image } from "@tarojs/components";
 
 import "./index.scss";
-import Tabbar from "@_gen/components/Tabbar";
+import Tabbar from "../index/tabbar";
 require("@src/images/tabbar/icon1_light.png");
 require("@src/images/tabbar/icon1_light_active.png");
 require("@src/images/tabbar/icon2_light.png");
@@ -39,6 +39,7 @@ class Index extends Component {
     }
     // 获取全部商品
     const productlistsAll = await getProductList({ status: 3 });
+
     this.setState({
       productlistsAll: productlistsAll.result,
       bId,
@@ -83,36 +84,7 @@ class Index extends Component {
           );
         })}
 
-        <Tabbar
-          onChange={index => {
-            // this.setState({
-            //   currentIndex: index,
-            // });
-          }}
-          current={this.state.currentIndex}
-          color="#000"
-          activeColor="#F05858"
-          list={[
-            {
-              pagePath: "pages/index/index",
-              text: "品牌商城",
-              iconPath: "../../images/tabbar/icon1_light.png",
-              selectedIconPath: "../../images/tabbar/icon1_light_active.png",
-            },
-            {
-              pagePath: "pages/me/index",
-              text: "购物车",
-              iconPath: "../../images/tabbar/icon2_light.png",
-              selectedIconPath: "../../images/tabbar/icon2_light_active.png",
-            },
-            {
-              pagePath: "pages/me/index",
-              text: "我的",
-              iconPath: "../../images/tabbar/icon3_light.png",
-              selectedIconPath: "../../images/tabbar/icon3_light_active.png",
-            },
-          ]}
-        />
+        <Tabbar currentIndex={0} bId={this.state.bId} />
       </View>
     );
   }
