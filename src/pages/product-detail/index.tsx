@@ -179,7 +179,7 @@ class Index extends Component {
       } else {
         // 创建订单
         // 保存products
-        const data = [
+        const orderProducts = [
           {
             product_id: productDetail,
             brand_id: curBrand,
@@ -190,11 +190,13 @@ class Index extends Component {
           },
         ];
         this.setState({ showPopup: false });
+
+        Taro.setStorageSync("orderProducts", orderProducts);
         Taro.navigateTo({
           url: getPath({
             moduleName: "brand",
             url: "/pages/order-create/index",
-            params: { data: JSON.stringify(data) },
+            // params: { data: JSON.stringify(orderProducts) },
           }),
         });
       }

@@ -4,7 +4,6 @@ import { View, Button, Text, Navigator, Image, Input } from "@tarojs/components"
 import { AtIcon } from "taro-ui";
 
 import "./index.scss";
-import Logo from "../Logo";
 import AV from "@_gen/utils/leancloud-storage/dist/av-weapp.js";
 import getPath from "@_gen/utils/getPath";
 import checkAuth from "@_gen/utils/checkAuth";
@@ -61,7 +60,7 @@ function Index(props) {
     <View style={{ display: "inline-block" }}>
       <View className="com-counter">
         <Button
-          className={`com-counter-button com-counter-button-left ${inputVal <= min && "com-counter-button-disabled"}`}
+          className={`com-counter-button com-counter-button-left ${inputVal <= min ? "com-counter-button-disabled" : ''}`}
           hoverClass={inputVal > min && "com-counter-button-hover"}
           onClick={() => {
             _decrease();

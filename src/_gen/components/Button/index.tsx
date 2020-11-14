@@ -4,7 +4,6 @@ import { View, Button, Text, Navigator, Image, Input } from "@tarojs/components"
 import { AtIcon } from "taro-ui";
 
 import "./index.scss";
-import Logo from "../Logo";
 import AV from "@_gen/utils/leancloud-storage/dist/av-weapp.js";
 import getPath from "@_gen/utils/getPath";
 import checkAuth from "@_gen/utils/checkAuth";

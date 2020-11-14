@@ -15,15 +15,13 @@ class Index extends Component {
     let {
       params: { data },
     } = getCurrentInstance().router;
-    console.log(data);
+    const orderProducts = Taro.getStorageSync("orderProducts");
+    console.log(orderProducts);
     
   }
 
   render() {
-    return (
-      <View className="index">
-      </View>
-    );
+    return <View className="index"></View>;
   }
 }
 

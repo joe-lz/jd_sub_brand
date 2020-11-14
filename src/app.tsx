@@ -17,7 +17,7 @@ class App extends Component {
     let NODE_ENV = process.env.NODE_ENV;
     const { getStorageSync, setStorageSync } = Taro;
     Taro.getStorageSync = (storageKey) => {
-      getStorageSync(`${NODE_ENV}_${storageKey}`);
+      return getStorageSync(`${NODE_ENV}_${storageKey}`);
     };
     Taro.setStorageSync = (storageKey, value) => {
       setStorageSync(`${NODE_ENV}_${storageKey}`, value);

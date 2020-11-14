@@ -56,10 +56,24 @@
           "scene": "1011"
         },
         {
-          "id": 1,
+          "id": 2,
           "name": "购物车",
-          "pathName": "pages/webviewShare/index",
-          "query": "url=https://www.baidu.com",
+          "pathName": "pages/cart-list/index",
+          "query": "bId=16",
+          "scene": "1011"
+        },
+        {
+          "id": 3,
+          "name": "我的",
+          "pathName": "pages/me/index",
+          "query": "bId=16",
+          "scene": "1011"
+        },
+        {
+          "id": 4,
+          "name": "订单列表",
+          "pathName": "pages/order-lists/index",
+          "query": "",
           "scene": "1011"
         }
       ]
