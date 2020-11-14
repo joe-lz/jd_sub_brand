@@ -26,7 +26,6 @@ function Index(props) {
   } = props;
   const { product_id, brand_id, skuinfo } = cartItem;
   const [selectedId, setselectedId] = useState();
-  console.log(product_id);
 
   return (
     <View className="com-brandcart">

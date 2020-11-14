@@ -1,3 +1,3 @@
 export default {
-  navigationBarTitleText: "创建订单",
+  navigationBarTitleText: "确认订单",
 };

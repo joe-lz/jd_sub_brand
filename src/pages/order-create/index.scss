@@ -1,0 +1,24 @@
+.ordercreate {
+  min-height: 100vh;
+  background-color: #F2F2F2;
+  &-section {
+    background-color: white;
+    margin-top: 20px;
+  }
+  &-section2 {
+    padding: 10px 0;
+  }
+  &-menu {
+    &-item {
+      padding: 0 30px !important;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 88px;
+      background-color: white;
+      &-desc {
+        color: #6C7D95;
+      }
+    }
+  }
+}

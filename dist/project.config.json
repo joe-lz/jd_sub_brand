@@ -1,5 +1,4 @@
 {
-  "miniprogramRoot": "./",
   "projectname": "brand",
   "description": "鲸典taro",
   "appid": "wx3db60cced1eeb85a",
@@ -39,7 +38,6 @@
   "simulatorPluginLibVersion": {},
   "condition": {
     "miniprogram": {
-      "current": -1,
       "list": [
         {
           "id": 0,
@@ -73,6 +71,13 @@
           "id": 4,
           "name": "订单列表",
           "pathName": "pages/order-lists/index",
+          "query": "",
+          "scene": "1011"
+        },
+        {
+          "id": 5,
+          "name": "创建订单",
+          "pathName": "pages/order-create/index",
           "query": "",
           "scene": "1011"
         }

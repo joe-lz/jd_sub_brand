@@ -1,0 +1,25 @@
+.com {
+  &-renderinvoice {
+    &-menu {
+      &-item {
+        margin-top: 20px;
+        padding: 0 30px !important;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 88px;
+        background-color: white;
+        &-invoice {
+          display: flex;
+          flex-direction: column;
+          // justify-content: flex-end;
+          align-items: flex-end;
+          // text-align: right;
+          &-desc {
+            color: #6C7D95;
+          }
+        }
+      }
+    }
+  }
+}

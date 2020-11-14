@@ -1,0 +1,29 @@
+.com {
+  &-renderaddress {
+    position: relative;
+    padding: 0 30px !important;
+    height: 160px;
+    background-color: white;
+    &-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+      &-title {
+        display: block;
+        font-weight: 500;
+      }
+      &-desc {
+        color: #6C7D95;
+      }
+    }
+    &-bg {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      height: 8px;
+    }
+  }
+}
