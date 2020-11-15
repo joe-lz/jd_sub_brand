@@ -29,12 +29,25 @@ class Index extends Component {
     let {
       params: { status },
     } = getCurrentInstance().router;
-    this.getlist();
     orderMenu.map((obj, index) => {
       if (Number(status) === obj.status) {
         this.setState({ current: index });
       }
     });
+  }
+
+  componentDidShow() {
+    let {
+      params: { status },
+    } = getCurrentInstance().router;
+    this.setState(
+      {
+        orderLists: [],
+      },
+      () => {
+        this.getlist();
+      }
+    );
   }
 
   async getlist() {

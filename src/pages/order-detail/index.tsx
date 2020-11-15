@@ -3,6 +3,7 @@ import Taro, { getCurrentInstance } from "@tarojs/taro";
 import { View, Button, Text, Navigator, Swiper, SwiperItem, Image } from "@tarojs/components";
 import { AtIcon } from "taro-ui";
 import dayjs from "dayjs";
+import AV from "@_gen/utils/leancloud-storage/dist/av-weapp.js";
 
 import "./index.scss";
 import Tabbar from "../index/tabbar";
@@ -137,6 +138,89 @@ class Index extends Component {
         <ProductCard key={`${profuctItemIndex + 1}`} productData={profuctItem} borderbottom={profuctItemIndex !== products.length - 1} />
       );
     });
+  }
+
+  handleAction({ orderDetail, action }) {
+    if (action.title_en === "cancel") {
+      // 注意：无论用户点击确定还是取消，Promise 都会 resolve。
+      Taro.showModal({
+        title: "提醒",
+        content: "确认取消订单吗",
+      }).then(res => {
+        if (res.confirm) {
+          Taro.showLoading({ title: "加载中..." });
+          AV.Cloud.run("orderCancel", { id: orderDetail.objectId })
+            .then(actionRes => {
+              if (actionRes.code === 0) {
+                this.getOrderDetail();
+                Taro.showToast({
+                  title: "取消成功",
+                  icon: "success",
+                  duration: 1000,
+                });
+              } else {
+                Taro.showToast({
+                  title: "操作失败",
+                  icon: "none",
+                  duration: 1000,
+                });
+              }
+            })
+            .finally(() => {
+              Taro.hideLoading();
+            });
+        }
+      });
+    }
+    if (action.title_en === "pay") {
+      const params = {
+        orderId: orderDetail.objectId,
+        prepayId: orderDetail.prepayId,
+      };
+      AV.Cloud.run("orderPayAgain", params)
+        .then(data => {
+          const payparams = {
+            appId: data.appId,
+            nonceStr: data.nonceStr,
+            package: data.package,
+            paySign: data.paySign,
+            signType: data.signType,
+            timeStamp: data.timeStamp,
+          };
+
+          wx.requestPayment({
+            ...payparams,
+            success: payResult => {
+              // 支付成功
+              console.log({ payResult });
+              Taro.showToast({
+                title: "支付成功",
+                icon: "success",
+                duration: 1000,
+              });
+              // 更新
+              this.getOrderDetail();
+            },
+            fail: payError => {
+              console.log({ payError });
+              Taro.showToast({
+                title: "支付失败",
+                icon: "none",
+                duration: 1000,
+              });
+            },
+          });
+        })
+        .catch(error => {
+          console.warn({ error });
+          // 错误处理
+        });
+    }
+    if (action.title_en === "express") {
+    }
+    if (action.title_en === "buy_again") {
+      Taro.redirectTo({ url: `/pages/index/index` });
+    }
   }
 
   render() {
