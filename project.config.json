@@ -89,6 +89,13 @@
           "pathName": "pages/order-detail/index",
           "query": "orderId=5fafbbca227a5a0822047dfa",
           "scene": "1011"
+        },
+        {
+          "id": 7,
+          "name": "品牌官网",
+          "pathName": "pages/website/index",
+          "query": "bId=5",
+          "scene": "1011"
         }
       ]
     }

@@ -1,0 +1,63 @@
+.com {
+  &-brandWeb {
+    &-sectionClients {
+      &-body {
+        position: relative;
+        height: 800px;
+      }
+      &-content {
+        overflow: hidden;
+        margin: 0 auto;
+        margin-top: 20px;
+        width: 550px;
+        height: 750px;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 16px;
+        border: 1px solid #e9ecf0;
+        background-color: white;
+      }
+      &-avatar {
+        display: block;
+        margin: 60px auto;
+        margin-bottom: 0;
+        width: 240px;
+        height: 240px;
+        border-radius: 120px;
+        overflow: hidden;
+        border: 1px solid #e9ecf0;
+      }
+      &-title {
+        display: block;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        width: 100%;
+        font-weight: bold;
+        text-align: center;
+      }
+      &-position {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        text-align: center;
+        color: #6c7d95;
+        line-height: 30px;
+      }
+      &-desc {
+        display: block;
+        margin: 0 auto;
+        width: 75%;
+        text-align: left;
+        color: #6c7d95;
+        line-height: 40px;
+
+        display: -webkit-box;
+        word-break: break-all;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 6;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: 235px;
+      }
+    }
+  }
+}

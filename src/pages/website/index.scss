@@ -1,0 +1,37 @@
+.brandWeb {
+  height: 100vh;
+  // background-color: #f2f2f2;
+  background-color: white;
+  &-navigator {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+  }
+  &-navBar {
+    position: fixed;
+    top: 200px;
+    left: 0;
+    z-index: 10;
+    overflow-x: scroll;
+    background-color: white;
+    white-space: nowrap;
+    Text {
+      display: inline-block;
+      margin: 0 30px;
+    }
+  }
+  &-section {
+    &-title {
+      padding-top: 40px;
+      padding-bottom: 30px;
+      Text {
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-weight: bold;
+        // font-size: 40px;
+        font-size: 36px;
+      }
+    }
+  }
+}

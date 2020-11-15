@@ -1,0 +1,89 @@
+.com {
+  &-brandWeb {
+    &-sectionProducts {
+      &-body {
+        position: relative;
+        height: 700px;
+      }
+      &-dots {
+        position: absolute;
+        top: 530px;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        &-item {
+          margin: 0 8px;
+          width: 16px;
+          height: 16px;
+          background-color: rgba(0, 0, 0, 0.2);
+          border-radius: 8px;
+          &-active {
+          }
+        }
+      }
+      &-imgcontent {
+        margin: 0 auto;
+        margin-bottom: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 500px;
+        height: 500px;
+      }
+      &-img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 16px;
+        transition: 0.3s;
+        border: 1px solid #e9ecf0;
+        background-color: white;
+        &-small {
+          width: 440px;
+          height: 440px;
+          opacity: 0.5;
+        }
+      }
+      &-itemtitle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      &-title {
+        padding: 20px 0;
+        display: block;
+        width: 100%;
+        font-weight: bold;
+        text-align: left;
+        &-desc {
+          display: block;
+          width: 200px;
+          text-align: right;
+          color: #266eff;
+          font-size: 28px;
+        }
+      }
+      &-desc {
+        display: block;
+        width: 100%;
+        text-align: left;
+        color: #6c7d95;
+        line-height: 30px;
+        height: 60px;
+
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        font-size: 24px;
+        // display: -webkit-box;
+        // word-break: break-all;
+        // -webkit-box-orient: vertical;
+        // -webkit-line-clamp: 3;
+        // overflow: hidden;
+        // text-overflow: ellipsis;
+      }
+    }
+  }
+}
