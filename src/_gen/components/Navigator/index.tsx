@@ -14,12 +14,12 @@ function Index(props) {
   let {
     colorBg = "white",
     borderBottom = true,
-    colorText = "#000000", //
+    colorText, //
     onHistoryback = () => {},
     title = "我的标题",
   } = props;
 
-  const [newOnHistoryback, setnewOnHistoryback] = useState(() => {});
+  const [newOnHistoryback, setnewOnHistoryback] = useState();
   const [leftIconName, setleftIconName] = useState("");
 
   useEffect(() => {
@@ -48,9 +48,12 @@ function Index(props) {
         leftIconName = "jichu_zuo_line";
       }
     }
-    setnewOnHistoryback(newOnHistoryback);
+    setnewOnHistoryback(() => {
+      return newOnHistoryback;
+    });
     setleftIconName(leftIconName);
   }, []);
+
   return (
     <View
       className={`com-navigator ${borderBottom ? "com-navigator-border" : ""} ${props["my-class"]}`}
@@ -74,7 +77,9 @@ function Index(props) {
             </View>
           </View>
         ) : null}
-        <Text className="com-navigator-h4">{title}</Text>
+        <Text className="com-navigator-h4" style={{ color: colorText || "black" }}>
+          {title}
+        </Text>
       </View>
     </View>
   );

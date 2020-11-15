@@ -76,7 +76,11 @@ Object.keys(compileJsTask).forEach(function (taskName) {
 
 function compilePageScss() {
   return gulp
-    .src([path.resolve(__dirname + "/**/*.scss"), `!${path.resolve(__dirname + "/src/_gen/**/**")}`])
+    .src([
+      path.resolve(__dirname + "/**/*.scss"), 
+      `!${path.resolve(__dirname + "/src/_gen/**/**")}`,
+      `!${path.resolve(__dirname + "/src/app.scss")}`,
+      ])
     .pipe(plumber(handleErrors))
     .pipe(plugins.sass())
     .pipe(rename({ extname: ".scss" }))

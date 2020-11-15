@@ -94,7 +94,7 @@
           "id": 7,
           "name": "品牌官网",
           "pathName": "pages/website/index",
-          "query": "bId=5",
+          "query": "bId=2",
           "scene": "1011"
         }
       ]

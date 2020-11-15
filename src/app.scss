@@ -1,4 +1,11 @@
 // @import "~taro-ui/dist/style/index.scss";
+@import "~taro-ui/dist/style/components/button.scss";
+@import "~taro-ui/dist/style/components/swipe-action.scss";
+@import "~taro-ui/dist/style/components/modal.scss";
+@import "~taro-ui/dist/style/components/input.scss";
+@import "~taro-ui/dist/style/components/form.scss";
+@import "~taro-ui/dist/style/components/action-sheet.scss";
+
 @import "./_gen/font/iconfont.scss";
 
 page {

@@ -32,17 +32,37 @@ class Index extends Component {
     };
   }
 
+  componentWillMount() {
+    Taro.showShareMenu({
+      withShareTicket: true,
+      menus: ["shareAppMessage", "shareTimeline"],
+    });
+  }
+
   async componentDidMount() {
     let {
-      params: { bId },
+      params: { scene, bId },
     } = getCurrentInstance().router;
+    if (scene) {
+      const newScene = decodeURIComponent(scene).split(",");
+      if (newScene && newScene.length === 2) {
+        bId = newScene[0];
+      }
+    }
+
     // 获取当前品牌
     const curBrand = (await getBrandByJxId({ id: bId })).result;
     this.setState({ curBrand });
+    // 添加到我的品牌
+    await addToMyBrands({
+      brand_id: curBrand.objectId,
+      type: 2,
+    });
+    // Taro.setNavigationBarTitle({ title: `「${curBrand.title}」官网` });
+    this.setState({ title: `「${curBrand.title}」官网`, colorText: 'white' });
   }
 
   onScroll(e) {
-    console.log(this);
     const { scrollTop } = e.detail;
     const { curBrand } = this.state;
     this.setState({
