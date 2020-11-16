@@ -7,10 +7,10 @@ import "./index.scss";
 import FixedBottom from "@_gen/components/FixedBottom";
 import Touchable from "@_gen/components/Touchable";
 import JX_Button from "@_gen/components/Button";
-import RenderAddress from "./RenderAddress";
-import RenderPrice from "./RenderPrice";
-import RenderGoods from "./RenderGoods";
-import RenderInvoice from "./RenderInvoice";
+import RenderAddress from "@_gen/components/RenderAddress";
+import RenderPrice from "@_gen/components/RenderPrice";
+import RenderGoods from "@_gen/components/RenderGoods";
+import RenderInvoice from "@_gen/components/RenderInvoice";
 import { updateCartById } from "@_gen/service/cart";
 import getPath from "@_gen/utils/getPath";
 

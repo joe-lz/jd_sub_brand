@@ -1,0 +1,19 @@
+.com {
+  &-fixedbottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    padding-bottom: calc(constant(safe-area-inset-bottom));
+    padding-bottom: calc(env(safe-area-inset-bottom));
+    width: 100%;
+    border-top: 1px solid #E9ECF0;;
+    background-color: white;
+    &-content {
+      // height: 100px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.com {
+  &-renderprice {
+    &-section {
+      background-color: white;
+      margin-top: 20px;
+    }
+    &-section2 {
+      padding: 10px 0;
+    }
+    &-menu {
+      &-item {
+        padding: 0 30px !important;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 88px;
+        background-color: white;
+      }
+      &-item2 {
+        height: 60px;
+        &-price {
+          color: #f05858;
+        }
+      }
+      &-item3 {
+        border-top: 1px solid #e9ecf0;
+        Text {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

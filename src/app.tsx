@@ -30,7 +30,7 @@ class App extends Component {
         if (res.x > 3) {
           Taro.showModal({
             title: "扫码结果",
-            content: `${JSON.stringify(this.$router.params)}`,
+            content: `${JSON.stringify(getCurrentInstance().router.params)}`,
             showCancel: true,
             cancelText: "测试页面",
           }).then((modalres) => {
