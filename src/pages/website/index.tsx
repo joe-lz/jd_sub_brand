@@ -59,7 +59,7 @@ class Index extends Component {
       type: 2,
     });
     // Taro.setNavigationBarTitle({ title: `「${curBrand.title}」官网` });
-    this.setState({ title: `「${curBrand.title}」官网`, colorText: 'white' });
+    // this.setState({ title: `「${curBrand.title}」官网`, colorText: "white" });
   }
 
   onScroll(e) {
@@ -91,6 +91,26 @@ class Index extends Component {
         timingFunc: "easeIn",
       },
     });
+  }
+
+  onShareAppMessage(res) {
+    const { curBrand } = this.state;
+    return {
+      title: `「${curBrand.title}」品牌商城`,
+      path: `/packages/brand/pages/website/index?bId=${curBrand.jxId}`,
+    };
+  }
+
+  onShareTimeline(res) {
+    const { curBrand } = this.state;
+
+    return {
+      title: `「${curBrand.title}」官网`,
+      imageUrl: makeImgLink({
+        url: curBrand.logo_atom_icon,
+        type: "",
+      }),
+    };
   }
 
   render() {
