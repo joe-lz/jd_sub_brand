@@ -18,6 +18,7 @@ import Honors from "./Honors";
 import Cases from "./Cases";
 import Clients from "./Clients";
 import Contactus from "./Contactus";
+import makeImgLink from "@_gen/utils/makeImgLink";
 
 class Index extends Component {
   constructor(props) {
@@ -96,14 +97,14 @@ class Index extends Component {
   onShareAppMessage(res) {
     const { curBrand } = this.state;
     return {
-      title: `「${curBrand.title}」品牌商城`,
+      title: `「${curBrand.title}」官网`,
       path: `/packages/brand/pages/website/index?bId=${curBrand.jxId}`,
     };
   }
 
   onShareTimeline(res) {
     const { curBrand } = this.state;
-
+    
     return {
       title: `「${curBrand.title}」官网`,
       imageUrl: makeImgLink({

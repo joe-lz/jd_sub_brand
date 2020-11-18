@@ -35,10 +35,10 @@ export default {
   pages: ["pages/index/index", "pages/cart-list/index", "pages/me/index", "pages/product-detail/index", "pages/order-create/index", "pages/order-lists/index", "pages/order-detail/index", "pages/website/index", "pages/website-detail/index"],
   subpackages: [{
     "root": "packages/brand",
-    "pages": ["pages/index/index", "pages/me/index"]
+    "pages": ["pages/index/index", "pages/cart-list/index", "pages/me/index", "pages/product-detail/index", "pages/order-create/index", "pages/order-lists/index", "pages/order-detail/index", "pages/website/index", "pages/website-detail/index"]
   }, {
     "root": "packages/card",
-    "pages": ["pages/index/index"]
+    "pages": ["pages/index/index", "pages/edit/index", "pages/shop/index", "pages/order-create/index"]
   }, {
     "root": "packages/orgs",
     "pages": ["pages/index/index"]
